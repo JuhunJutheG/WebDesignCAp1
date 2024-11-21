@@ -1,0 +1,202 @@
+* {
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    text-align: center;
+    min-width: 320px;
+    background-color: #ACC18A;
+}
+
+nav {
+    background-color: #605B56;
+    color: #F2FBE0;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+nav img {
+    padding-right: 50rem;
+}
+
+nav a {
+    color: inherit;
+    padding-right: 4rem;
+}
+
+.title, .aboutus {
+    margin: 3rem 0;
+}
+
+.conveyor {
+    width: 100%;
+    height: 500px;
+    background-color: #111;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 .5rem rgba(0, 0, 0, 0.5) ;
+  }
+
+.conveyor:before, .conveyor:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+.conveyor:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+.conveyor:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+.conveyor-inner {
+    height: 100%;
+    width: 1000rem;
+    display: flex;
+    animation: marquee;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.conveyor-inner img {
+    padding: 0 .25rem 0;
+}
+
+.year {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.description {
+    font-style: oblique;
+    font-size: 0.75rem;
+    color: #605B56;
+}
+
+h2 {
+    padding-bottom: 1rem;
+}
+
+.col img {
+    display: flex;
+}
+
+.form {
+    margin: 5rem 10rem;
+    text-align: left;
+}
+
+form {
+    justify-content: center;
+    padding: .5rem 5rem 2rem;
+    margin: auto;
+    border: 2px solid black;
+}
+
+input, select {
+    text-align: left;
+    width: 23rem;
+    height: 1.5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer p {
+    padding: 1rem 2rem;
+    color: #F2FBE0;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a:hover {
+    color: #605B56;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones */
+
+    body {
+        font-size: .75rem;
+        min-width: 320px;
+        background-color: #ACC18A;
+    }
+
+    header {
+        background-color: #605B56;
+        color: #F2FBE0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    navbar {
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+    }
+
+    navbar img {
+        padding-right: 50rem;
+    }
+
+    navbar a {
+        color: inherit;
+        padding-right: 4rem;
+    }
+
+    .title, .aboutus {
+        margin: 3rem 0;
+    }
+
+
+    .form {
+        margin: 0 1rem;
+        display: flex;
+
+    }
+
+    form {
+        justify-content: center;
+        padding: .5rem 2rem 2rem;
+        margin: auto;
+        border: 2px solid black;
+    }
+
+    input, select {
+        text-align: left;
+        width: 15rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    footer p {
+        padding: 1rem 2rem;
+    }
+
+}
+
+@keyframes marquee {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-30%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
